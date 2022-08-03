@@ -1,0 +1,36 @@
+.flex-container {
+
+    display: flex;
+    justify-content:center;
+}
+
+.header-month {
+
+    padding-right: 5rem;
+
+}
+
+
+
+#weekdays {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    color: #52616B;
+}
+
+.header-button {
+    background-color: #1E2022 ; 
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }

@@ -1,0 +1,17 @@
+
+.day {
+
+    background-color: #1E2022;
+    margin: 10px 0 0 2%;
+    flex-grow: 1;
+    font-size: 15px;
+    height: 100px;
+    width: calc(100% * (1/8) - 10px - 1px);
+    color:#F0F5F9 ;
+    
+}
+
+.day:hover {
+    
+    opacity:0.5 ;
+  }

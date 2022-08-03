@@ -1,0 +1,14 @@
+.Calendar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    background-color:#52616B ;
+
+    margin:auto; 
+    padding-bottom: 1rem;
+    width: 90%;
+    padding-right:1rem;
+
+
+}
