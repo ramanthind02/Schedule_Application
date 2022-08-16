@@ -43,9 +43,9 @@ app.use((error, req, res, next) => {
 
 
 mongoose
-    .connect(process.env.PORT)
+    .connect(process.env.PORT || 4000)
     .then(()=>{
-        app.listen(4000); 
+        app.listen(process.env.PORT || 4000); 
     })
     .catch(err => {
 
