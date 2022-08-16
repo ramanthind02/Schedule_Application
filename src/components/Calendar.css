@@ -12,3 +12,12 @@
 
 
 }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    column-gap: 10px;
+    min-width: 800px;
+    background-color:#1E2022; 
+
+  }

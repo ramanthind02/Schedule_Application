@@ -2,13 +2,21 @@ import './Header.css'
 
 import Calendar from './Calendar';
 
-import React, { useState, Component } from 'react';
+import React, { useState, Component, useEffect } from 'react';
+import { useParams } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+
+
 
 
 
 function Header() {
 
-    
+    const [loading, setLoading] = useState(true)
+
+    let params = useParams();
+
+    const storeNumber = params.storeNumber; 
 
 
     function monthName(mon) {
@@ -27,38 +35,49 @@ function Header() {
 
 
 
+        if(loading===false){
 
-        setMonth(month - 1)
+            setMonth(month - 1)
+        }
+        
 
     }
 
     function nextHandler() {
-        setMonth(month + 1)
+        if(loading===false){
+
+            setMonth(month + 1)
+        }
     }
 
 
+    
+
+
+
+
     return (
+        
+        
+        
+        
         <div>
 
 
             <div className="flex-container" >
+                <h2 className='header-month'> Store:{storeNumber}</h2>
                 <h2 className="header-month">{monthName(month)} {year}</h2>
-                <button onClick={backHandler} className="header-button" >Back</button>
-                <button onClick={nextHandler} className="header-button">Next</button>
+                <Button variant="outline-primary" onClick={backHandler} >Back</Button>{' '}
+                <Button variant="outline-primary" onClick={nextHandler} >Next</Button>
             </div>
 
 
-            <div id="weekdays">
-                <div>Sunday</div>
-                <div>Monday</div>
-                <div>Tuesday</div>
-                <div>Wednesday</div>
-                <div>Thursday</div>
-                <div>Friday</div>
-                <div>Saturday</div>
-            </div>
+ 
 
-            <Calendar month={month} className="Calendar" />
+            <Calendar loading={loading} setLoading={setLoading} month={month} storeNumber={storeNumber} className="Calendar" />
+
+            
+
 
 
 

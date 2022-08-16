@@ -2,11 +2,14 @@
 
     display: flex;
     justify-content:center;
+    background-color:#1E2022; 
+
 }
 
 .header-month {
 
     padding-right: 5rem;
+    color:#F0F5F9; 
 
 }
 
