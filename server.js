@@ -43,7 +43,7 @@ app.use((error, req, res, next) => {
 
 
 mongoose
-    .connect(process.env.PORT || 4000)
+    .connect(process.env.API_KEY)
     .then(()=>{
         app.listen(process.env.PORT || 4000); 
     })
